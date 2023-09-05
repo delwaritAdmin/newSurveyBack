@@ -1,0 +1,24 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://admin_38p8_user:fbRsd0VbBqQu99iaukxLVeXChkfSSSJG@dpg-cjqvdvu1208c73fpoqe0-a.oregon-postgres.render.com/admin_38p8"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// schema.prisma
+model Survey {
+  id Int @id @default(autoincrement())
+
+  // Assuming "satisfied," "fnf," "condition1," "condition2," "satisfied," "commnet" are fields in your data
+  name              String?
+  email             String?
+  satisfied         String?
+  recommend         String? // Change to the appropriate data type if needed
+  staffCommunicate1 String? // Change to the appropriate data type if needed
+  staffCommunicate2 String? // Change to the appropriate data type if needed
+  staffCommunicate3 String?
+  satisfiedRatting  String?
+  comment           String?
+}
