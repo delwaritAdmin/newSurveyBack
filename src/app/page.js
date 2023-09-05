@@ -12,7 +12,7 @@ export default async function page() {
 }
 
 async function getData() {
-  const res = await fetch("http://localhost:3001/api/details", {
+  const res = await fetch("https://new-survey-back.vercel.app/api/details", {
     cache: "no-store",
   });
   // The return value is *not* serialized
